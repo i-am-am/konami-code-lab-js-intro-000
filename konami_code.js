@@ -11,17 +11,13 @@ const codes = [
   "a"
 ];
 
-
-
 const input = document.querySelector('input')
-
 input.addEventListener('keydown', function(e) {
-  console.log(e.which)
+  const key = e.which
 })
 
-function init(e) {
+function init(key) {
   let index = 0;
-  const key = e.key;
   if (key === codes[index]) {
     index++;
     if (index === codes.length) {
