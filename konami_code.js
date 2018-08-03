@@ -11,20 +11,19 @@ const codes = [
   "a"
 ];
 
-const input = document.querySelector('input')
-input.addEventListener('keydown', function(e) {
-  const key = e.which
-})
-
-function init(key) {
-  let index = 0;
-  if (key === codes[index]) {
-    index++;
-    if (index === codes.length) {
-      alert("Hurray!");
+function init() {
+  const input = document.querySelector('input')
+  input.addEventListener('keydown', function(e) {
+    const key = e.which
+    let index = 0;
+    if (key === codes[index]) {
+      index++;
+      if (index === codes.length) {
+        alert("Hurray!");
+        index = 0;
+      }
+    } else {
       index = 0;
     }
-  } else {
-    index = 0;
-  }
+  })
 }
